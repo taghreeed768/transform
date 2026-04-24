@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background-color: #000; 
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+      
+        .ribbon-banner {
+            background-color: #16867a;
+            color: rgb(255, 255, 255);
+            padding: 15px 100px; 
+            font-size: 22px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 150px; 
+
+            clip-path: polygon(
+                15% 0%, 0% 0%, 15% 50%, 0% 100%, 15% 100%, 
+                85% 100%, 100% 100%, 85% 50%, 100% 0%, 85% 0%
+            );
+        }
+
+    
+        .boxes-container {
+            display: flex;
+            justify-content: center;
+            gap: 130px; 
+            width: 90%;
+        }
+
+      
+        .shape-box {
+            background-color: #16867a;
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            margin-top: 150px;
+            border-radius: 10px 40px 10px 40px;
+            cursor: pointer;
+        }
+
+      
+        .shape-box.translate-box {
+            transition: all 2.1s ease;
+        }
+        .shape-box.translate-box:hover {
+            background-color: #ee0bcc;
+            transform: translateY(40px); 
+          
+        }
+
+  
+        .shape-box.rotate-box {
+            transition: all 2.1s ease;
+        }
+        .shape-box.rotate-box:hover {
+            background-color: #faf7e3c1;
+            transform: rotate(45deg); 
+        }
+
+       
+        .shape-box.scale-box {
+            transition: all 2.5s ease;
+        }
+
+     
+        .shape-box.scale-box:hover {
+          transform:scale(-1.2);
+            background-color: #16867a;
+            color: #ff01bbcd;
+        }
+
+      
+        .shape-box.scale-box span {
+            display: inline-block; 
+            transition: all 1.8s ease;
+        }
+
+
+     
+        .shape-box.skew-box {
+            transition: all 2.1s ease;
+        }
+        .shape-box.skew-box:hover {
+            transform: skewX(20deg);
+            background-color: #eeff01; 
+            color: #000000;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="ribbon-banner">Transform</div>
+
+    <div class="boxes-container">
+        <div class="shape-box translate-box">translate</div>
+        <div class="shape-box rotate-box">rotate</div>
+        <div class="shape-box scale-box"><span>scale</span></div>
+        <div class="shape-box skew-box">skew</div>
+    </div>
+
+</body>
+</html>
